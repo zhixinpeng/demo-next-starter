@@ -22,9 +22,7 @@ export default function Home({
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <section className={utilStyles.headingMd}>
-          When to use Static Generation v.s. Server-side Rendering
-        </section>
+        <section className={utilStyles.headingMd}>Create a next app starter</section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Blog</h2>
           <ul className={utilStyles.list}>
