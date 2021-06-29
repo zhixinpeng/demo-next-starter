@@ -16,11 +16,11 @@ export function getSortedPostsData() {
 
     return {
       id,
-      ...matterResults.data,
+      ...(matterResults.data as { date: string; title: string }),
     }
   })
 
-  return allPostsData.sort((a, b) => b.date - a.date)
+  return allPostsData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
 export function getAllPostIds() {
@@ -44,6 +44,6 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...matterResult.data,
+    ...(matterResult.data as { date: string; title: string }),
   }
 }
